@@ -19,7 +19,9 @@ jobs:
           node-version: 18
 
       - name: Install Dependencies
-        run: npm install
-
+        run:  |
+              npm install
+              npx playwright install
+              
       - name: Run Scraper by 21f1003364@ds.study.iitm.ac.in
         run: node scraper.js
