@@ -1,6 +1,6 @@
 const { chromium } = require('playwright');
 
-const urls = Array.from({ length: 10 }, (_, i) => `https://datadash.dev/report/seed/${72 + i}`);
+const urls = Array.from({ length: 10 }, (_, i) => `https://sanand0.github.io/tdsdata/js_table/?seed=${72 + i}`);
 
 (async () => {
   const browser = await chromium.launch();
