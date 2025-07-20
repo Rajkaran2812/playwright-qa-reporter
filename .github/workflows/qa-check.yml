@@ -1,0 +1,25 @@
+name: Automated QA with Playwright
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  scrape-and-sum:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Scraper by 21f1003364@ds.study.iitm.ac.in
+        run: node scraper.js
